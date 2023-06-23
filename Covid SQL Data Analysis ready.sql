@@ -26,7 +26,7 @@ select Location, date, total_cases, new_cases, total_deaths, population
 from coviddeaths
 order by 1,2
 
-#The datatypes are messed up coming into the table. I canged date to be date format and made sure all the colums post 4 were numerical
+#The datatypes are messed up coming into the table. I changed date to be date format and made sure all the columns past 4 were numerical
 select count(*) from coviddeaths 
 
 # Looking at total_cases versus total_death
@@ -129,7 +129,7 @@ select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinatio
 from coviddeaths dea
 join covidvaccinations vac
 on dea.location = vac.location 
-and dea.date = vac.date				#Since PercentPopulationVaccinated exceeds population these are not unigue peopl vaccinated, many more than once
+and dea.date = vac.date				#Since PercentPopulationVaccinated exceeds population these are not unique people vaccinated, many more than once
 where dea.continent != ''
 	and dea.location = 'United States'
 #order by 2, 3
@@ -156,7 +156,7 @@ select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinatio
 from coviddeaths dea
 join covidvaccinations vac
 	on dea.location = vac.location 
-	and dea.date = vac.date				#Since PercentPopulationVaccinated exceeds population these are not unigue peopl vaccinated, many more than once
+	and dea.date = vac.date				#Since PercentPopulationVaccinated exceeds population these are not unique people vaccinated, many more than once
 where dea.continent != ''
 #	and dea.location = 'United States'
 #order by 2, 3
@@ -172,7 +172,7 @@ select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinatio
 from coviddeaths dea
 join covidvaccinations vac
 	on dea.location = vac.location 
-	and dea.date = vac.date				#Since PercentPopulationVaccinated exceeds population these are not unigue peopl vaccinated, many more than once
+	and dea.date = vac.date				#Since PercentPopulationVaccinated exceeds population these are not unique people vaccinated, many more than once
 where dea.continent != ''percentpeoplevaccinated
 
 select *
