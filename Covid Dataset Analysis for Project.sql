@@ -1,3 +1,9 @@
+-- This is the SQL code I wrote for a project I put together using COVID data that I took from the Our World in Data
+-- website    https://ourworldindata.org/privacy-policy
+-- I include joins, CTEs, temporary tables, and subqueries
+-- I plan on making a dashboard to visualize this data using Tableau
+
+
 select * 
 from covidvacc
 order by 3,4
@@ -149,3 +155,6 @@ on d.location = v.location and d.date = v.date
 where d.continent is not null
 --order by 2,3
 ;
+
+select * 
+from PercentPopulationVaccinated
